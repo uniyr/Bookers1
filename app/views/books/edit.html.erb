@@ -1,0 +1,39 @@
+<div class="all">
+  <h1 class="editing">Editing Book</h1>
+  
+  <% if flash[:notice] %>
+  <div class="flash">
+  <%= flash[:notice] %>
+  </div>
+  <% end %>
+  
+  <!--now　これ効いてない　空欄でupdateすると、前のテキストのままになる。-->
+  <% if @book.errors.any? %>
+  <div id="error_explanation">
+    <h3><%= @book.errors.count %> error prohibited this product from being saved:</h3>
+    <ul>
+      <% @book.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+  <!---->
+  
+  <%= form_with model: @book, local:true do |f| %>
+  <div class="field">
+    <label for="book_title">Title</label>
+    <div class="book_title" id="book_title"><%= f.text_field :title %></div>
+  </div>
+  <div class="field">
+    <label for="book_body">Body</label>
+    <div class="book_body" id="book_body"><%= f.text_area :body %></div>
+  </div>
+  <div class="actions"><%= f.submit ' Update Book ' %></div>  
+  <% end %>
+  
+  <p><%= link_to "Show",book_path(@book)%> | <a href="/books" class="back_button">Back</a></p>
+  
+  
+</div>
+

@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: verdana, arial, helvetica, sans-serif;
+}
+a{
+    color: black;
+}
+.all{
+    margin: 30px; 
+}
+
+/*TOPのCSS*/
+p{
+    font-size: 13px;
+}
+.top-sentence{
+    padding-left: 30px;
+    padding-top: 30px;
+}
+/*INDEXのCSS*/
+.books{
+    margin: 20px 0;
+}
+table{
+    border-collapse: separate;
+    border-spacing: 2px;
+}
+.table_calum th{
+    text-align: center;
+    padding-bottom: 5px;
+}
+td {
+    padding-bottom: 7px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 13px;
+}   
+.field, .actions{
+    margin-bottom: 10px;
+}
+#title, #body{
+    font-size: 13px;
+}
+#error_explanation{
+    color: red;
+}
+/*.actions{*/
+/*    padding: 1px 6px;*/
+/*} ボーダーの外側に増えてしまう　スペースで調整*/
+
+/*SHOWのCSS*/
+#notice{
+    /*color: green;*/
+    margin-bottom: 30px;
+    margin-left: 30px;
+}
+.content{
+    margin-bottom: 30px;
+    margin-left: 30px;
+}
+.flash{
+    margin-bottom: 30px;
+    margin-left: 30px;
+    color: green;
+}
+/*EDITのCSS*/
+.editing{
+    margin-bottom: 30px;
+}

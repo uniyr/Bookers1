@@ -1,0 +1,15 @@
+<div class="all">
+    <!--def create のとこに書いてある-->
+    <% if flash[:notice] %>
+    <div class="flash">
+    <%= flash[:notice] %>
+    </div>
+    <% end %>
+    
+    <p class="content"><strong>Title:</strong> <%= @book.title %></p>
+    <p class="content"><strong>Body:</strong> <%= @book.body %></p>
+    
+    <p><span><%= link_to "Edit", edit_book_path(@book) %></span> | <a href="/books" class="back_button">Back</a></p>
+
+</div>
+
